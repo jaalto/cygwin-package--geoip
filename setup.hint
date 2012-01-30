@@ -1,0 +1,10 @@
+sdesc: "IP lookup command line tools that use the GeoIP library"
+ldesc: "A program and C library that enables the user to find the country
+that any IP address or hostname originates from. It uses a file based
+database that is accurate as of March 2002. This database simply
+contains IP blocks as keys, and countries as values. This database
+should be more complete and accurate than using reverse DNS lookups.
+This package contains the command line utilities to resolve the IP
+numbers using the GeoIP library."
+category: Net
+requires: cygwin libz

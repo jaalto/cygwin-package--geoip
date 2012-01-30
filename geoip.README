@@ -1,0 +1,114 @@
+geoip
+------------------------------------------
+IP lookup command line tools that use the GeoIP library
+
+GeoIP is a C library that enables the user to find the country that any IP
+address or hostname originates from. It uses a file based database that is
+accurate as of March 2002. This database simply contains IP blocks as keys,
+and countries as values. This database should be more complete and accurate
+than using reverse DNS lookups. This package contains the command line
+utilities to resolve the IP numbers using the GeoIP library.
+
+Runtime requirements:
+  cygwin
+  libz
+
+Build requirements:
+  cygwin
+
+Canonical homepage:
+  http://packages.debian.org/stable/net/geoip-bin
+  http://packages.debian.org/unstable/net/geoip-bin
+  http://freshmeat.net/projects/geoip/
+  http://www.maxmind.com/download/geoip/api/c/
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing List:
+
+IRC channel:
+
+Upstream contact:
+  Author: T.J. Mather <tjmather@maxmind.com>
+  Bugs: T.J. Mather <tjmather@maxmind.com>
+
+License:
+  GPL
+
+Language:
+  C
+
+------------------------------------
+
+Build instructions:
+  unpack geoip-1.3.14-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./geoip*.sh all
+
+This will create:
+  geoip-1.3.14-1.tar.bz2
+  geoip-1.3.14-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+etc/postinstall/geoip.sh
+etc/preremove/geoip-manifest-from.lst
+etc/preremove/geoip-manifest.lst
+etc/preremove/geoip.sh
+usr/bin/cygGeoIP-1.dll
+usr/bin/cygGeoIPUpdate-0.dll
+usr/bin/geoiplookup.exe
+usr/bin/geoipupdate.exe
+usr/include/GeoIP.h
+usr/include/GeoIPCity.h
+usr/include/GeoIPUpdate.h
+usr/lib/libGeoIP.a
+usr/lib/libGeoIP.dll.a
+usr/lib/libGeoIP.la
+usr/lib/libGeoIPUpdate.a
+usr/lib/libGeoIPUpdate.dll.a
+usr/lib/libGeoIPUpdate.la
+usr/share/GeoIP/GeoIP.dat
+usr/share/doc/Cygwin/geoip-1.3.14.README
+usr/share/doc/geoip-1.3.14/AUTHORS
+usr/share/doc/geoip-1.3.14/COPYING
+usr/share/doc/geoip-1.3.14/ChangeLog
+usr/share/doc/geoip-1.3.14/INSTALL
+usr/share/doc/geoip-1.3.14/README
+usr/share/doc/geoip-1.3.14/READMEwin32.txt
+usr/share/doc/geoip-1.3.14/TODO
+usr/share/doc/geoip-1.3.14/examples/GeoIP.conf
+usr/share/doc/geoip-1.3.14/examples/GeoIP.conf.default
+usr/share/man/man1/geoipexport.1.gz
+usr/share/man/man1/geoiplookup.1.gz
+usr/share/man/man1/geoipupdate.1.gz
+
+------------------
+
+Port Notes:
+
+----- version 1.3.14-1 -----
+- Updated pstream version 2006-02-96 Jari Aalto.       
+- Same changes as in 1.3.8
+
+----- version 1.3.8-1 -----
+- Initial Private release 2006-01-24 Jari Aalto.
+  Not submitted to Cygwin.
+- This port is based on Debian package.
+- No manual page geoipexport.1 - Copied from Debian.
+- No manual page for geoipexportlocations.exe (not even in Debian)
+- libGeoIP/Makefile.am: added shared libraries to 'libGeoIP_la_LDFLAGS' value
+  -no-undefined' and to 'libGeoIPUpdate_la_LIBADD' with libGeoIP.la.
+  Ran autoreconf after these changes. Thanks to Yaakov S, see
+  http://sourceware.org/ml/cygwin-apps/2006-02/msg00041.html
+- ITP http://sourceware.org/ml/cygwin-apps/2006-02/msg00024.html
+
+Cygwin port maintained by: Jari Aalto <jari dt aalto A T cante dt net>
+

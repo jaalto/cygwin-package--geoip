@@ -1,0 +1,40 @@
+.\" .UC 4
+.TH "GEOIPEXPORT" "1" "28 Mar 2003" "Marek Habersack <grendel@debian.org>" ""
+.SH "NAME"
+geoipexport \- a program for exporting the GeoIP IP\-to\-country database
+.SH "SYNOPSIS"
+geoipexport [\-bcfx] bit_file out_file1 [out_file2]
+.SH "DESCRIPTION"
+geoipexport exports the GeoIP bit database file from its binary form into one of several formats: binary, CSV,
+full CSV and XML.
+.SH "OPTIONS"
+.IP "\-b"
+Export the specified database into a binary file
+.IP "\-c"
+Export the specified database into a CSV file. Output doesn't include all fields.
+.IP "\-f"
+Export the specified database into a CSV file. Output includes all fields.
+.IP "\-x"
+Export the specified database into an XML file.
+.SH "RETURN CODES"
+geoipexport returns 0 on success, 1 on error.
+.SH "FILES"
+.PP 
+.I /etc//GeoIP.conf
+.PP 
+Configuration file for GeoIP, should contain license key. If you don't own the license, you do needn't
+have this file.
+
+.SH "AUTHOR"
+Written by Marek Habersack for the Debian project.
+.SH "REPORTING BUGS"
+Report bugs to <support@maxmind.com>
+.SH "COPYRIGHT"
+Copyright © 2002 MaxMind.com
+
+This is free software; see the source for copying conditions.
+There is NO warranty; not even for MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.
+.SH "SEE ALSO"
+.PP 
+geoiplookup(1), geoipupdate(1)
